@@ -1,0 +1,12 @@
+body {
+    background: #202020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+#gameCanvas {
+    border: 1px solid #fff;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
