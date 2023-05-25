@@ -1,12 +1,85 @@
 body {
-    background: #202020;
+    background-color: #555;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
 }
+
+#gameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #gameCanvas {
-    border: 1px solid #fff;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    background-color: #000;
+}
+
+#buttonContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+
+#up {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+#left {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+#down {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+#right {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+#pause {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 12px;
+    padding: 10px 24px;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+@media screen and (max-width: 768px) {
+    #gameContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #buttonContainer {
+        gap: 20px;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 15px 30px;
+    }
 }

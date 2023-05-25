@@ -121,3 +121,43 @@ function collision(head, array) {
         
 // Setzen eines Intervals, um die Zeichenfunktion alle 150 ms aufzurufen
 let game = setInterval(draw, 150);
+// JavaScript-Teil
+
+// Referenzen zu den Buttons
+const upButton = document.getElementById('up');
+const downButton = document.getElementById('down');
+const leftButton = document.getElementById('left');
+const rightButton = document.getElementById('right');
+const pauseButton = document.getElementById('pause');
+
+// EventListener für die Buttons
+upButton.addEventListener('click', () => {
+  if(d !== 'DOWN') {
+    d = 'UP';
+  }
+});
+downButton.addEventListener('click', () => {
+  if(d !== 'UP') {
+    d = 'DOWN';
+  }
+});
+leftButton.addEventListener('click', () => {
+  if(d !== 'RIGHT') {
+    d = 'LEFT';
+  }
+});
+rightButton.addEventListener('click', () => {
+  if(d !== 'LEFT') {
+    d = 'RIGHT';
+  }
+});
+
+let gamePaused = false;
+pauseButton.addEventListener('click', () => {
+  gamePaused = !gamePaused;
+  if(gamePaused) {
+    clearInterval(game);
+  } else {
+    game = setInterval(draw, 150);
+  }
+});
