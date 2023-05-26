@@ -4,16 +4,9 @@ const context = canvas.getContext('2d');
 
 const box = 30;
 
-let canvasSize;
-let smallerDimension = Math.min(window.innerWidth, window.innerHeight);
+const smallerDimension = Math.min(window.innerWidth, window.innerHeight);
+const canvasSize = Math.floor(smallerDimension / box);
 
-if (smallerDimension <= 600) {
-    canvasSize = 15;
-} else if (smallerDimension <= 1200) {
-    canvasSize = 20;
-} else {
-    canvasSize = 30;
-}
 
 canvas.width = box * canvasSize;
 canvas.height = box * canvasSize;

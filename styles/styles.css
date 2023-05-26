@@ -12,12 +12,19 @@ body {
     justify-content: center;
     align-items: center;
 }
+#gameLayout{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+}
 
 #gameCanvas {
     background-color: #000;
 }
 
 #buttonContainer {
+    height: 50%;
+    width: 50%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -61,6 +68,7 @@ button {
     transition-duration: 0.4s;
     border-radius: 12px;
     padding: 10px 24px;
+    margin: 0;
 }
 
 button:hover {
